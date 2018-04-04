@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061C6A014638ABA47B4BBC5E /* libPods-GroupShot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 490963C89A6DE2C1DB8272F6 /* libPods-GroupShot.a */; };
 		3717421B2028B8800051F999 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3717421A2028B8800051F999 /* AppDelegate.m */; };
 		3717421E2028B8800051F999 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3717421D2028B8800051F999 /* ViewController.m */; };
 		371742212028B8800051F999 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3717421F2028B8800051F999 /* Main.storyboard */; };
@@ -16,9 +17,17 @@
 		371742352028BF350051F999 /* UIImage+cdata.m in Sources */ = {isa = PBXBuildFile; fileRef = 371742322028BF350051F999 /* UIImage+cdata.m */; };
 		371742362028BF350051F999 /* UIImage+ImageData.m in Sources */ = {isa = PBXBuildFile; fileRef = 371742342028BF350051F999 /* UIImage+ImageData.m */; };
 		371742382028BFA60051F999 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 371742372028BFA60051F999 /* ViewController.xib */; };
+		371CEC8B20678F1900DC4F0D /* WDDrawPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 371CEC8820678F1900DC4F0D /* WDDrawPath.m */; };
+		371CEC8C20678F1900DC4F0D /* WDDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 371CEC8A20678F1900DC4F0D /* WDDrawView.m */; };
+		3726F3002073A57A007C7B8A /* GSDefine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3726F2FE2073A57A007C7B8A /* GSDefine.cpp */; };
+		3759C1F32063F04D00C6500D /* ImageViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3759C1F12063F04D00C6500D /* ImageViewController.mm */; };
+		3759C1F42063F04D00C6500D /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3759C1F22063F04D00C6500D /* ImageViewController.xib */; };
+		3777E1C620640C1000B7D764 /* MTCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3777E1C420640C1000B7D764 /* MTCollectionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0138E2F8C5AF82AF8AFF31E8 /* Pods-GroupShot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupShot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GroupShot/Pods-GroupShot.debug.xcconfig"; sourceTree = "<group>"; };
+		0EBE1234BBAB0D8C3807351C /* Pods-GroupShot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupShot.release.xcconfig"; path = "Pods/Target Support Files/Pods-GroupShot/Pods-GroupShot.release.xcconfig"; sourceTree = "<group>"; };
 		371742162028B8800051F999 /* GroupShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		371742192028B8800051F999 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3717421A2028B8800051F999 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -34,6 +43,18 @@
 		371742332028BF350051F999 /* UIImage+ImageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageData.h"; sourceTree = "<group>"; };
 		371742342028BF350051F999 /* UIImage+ImageData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageData.m"; sourceTree = "<group>"; };
 		371742372028BFA60051F999 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		371CEC8720678F1900DC4F0D /* WDDrawPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDDrawPath.h; sourceTree = "<group>"; };
+		371CEC8820678F1900DC4F0D /* WDDrawPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDDrawPath.m; sourceTree = "<group>"; };
+		371CEC8920678F1900DC4F0D /* WDDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDDrawView.h; sourceTree = "<group>"; };
+		371CEC8A20678F1900DC4F0D /* WDDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDDrawView.m; sourceTree = "<group>"; };
+		3726F2FE2073A57A007C7B8A /* GSDefine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GSDefine.cpp; sourceTree = "<group>"; };
+		3726F2FF2073A57A007C7B8A /* GSDefine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GSDefine.hpp; sourceTree = "<group>"; };
+		3759C1F02063F04D00C6500D /* ImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		3759C1F12063F04D00C6500D /* ImageViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageViewController.mm; sourceTree = "<group>"; };
+		3759C1F22063F04D00C6500D /* ImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
+		3777E1C420640C1000B7D764 /* MTCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCollectionView.m; sourceTree = "<group>"; };
+		3777E1C520640C1000B7D764 /* MTCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCollectionView.h; sourceTree = "<group>"; };
+		490963C89A6DE2C1DB8272F6 /* libPods-GroupShot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GroupShot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				061C6A014638ABA47B4BBC5E /* libPods-GroupShot.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +74,8 @@
 			children = (
 				371742182028B8800051F999 /* GroupShot */,
 				371742172028B8800051F999 /* Products */,
+				EE8EFA71FACFC6E0C280F53C /* Pods */,
+				920B197E6C5A2895E2B7DE96 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +90,11 @@
 		371742182028B8800051F999 /* GroupShot */ = {
 			isa = PBXGroup;
 			children = (
+				371CEC8620678F1900DC4F0D /* WDDrawView */,
+				3777E1C520640C1000B7D764 /* MTCollectionView.h */,
+				3777E1C420640C1000B7D764 /* MTCollectionView.m */,
+				3726F2FE2073A57A007C7B8A /* GSDefine.cpp */,
+				3726F2FF2073A57A007C7B8A /* GSDefine.hpp */,
 				371742312028BF350051F999 /* UIImage+cdata.h */,
 				371742322028BF350051F999 /* UIImage+cdata.m */,
 				371742332028BF350051F999 /* UIImage+ImageData.h */,
@@ -75,13 +104,44 @@
 				3717421C2028B8800051F999 /* ViewController.h */,
 				3717421D2028B8800051F999 /* ViewController.m */,
 				371742372028BFA60051F999 /* ViewController.xib */,
-				3717421F2028B8800051F999 /* Main.storyboard */,
-				371742222028B8800051F999 /* Assets.xcassets */,
+				3759C1F02063F04D00C6500D /* ImageViewController.h */,
+				3759C1F12063F04D00C6500D /* ImageViewController.mm */,
+				3759C1F22063F04D00C6500D /* ImageViewController.xib */,
 				371742242028B8800051F999 /* LaunchScreen.storyboard */,
+				3717421F2028B8800051F999 /* Main.storyboard */,
 				371742272028B8800051F999 /* Info.plist */,
 				371742282028B8800051F999 /* main.m */,
+				371742222028B8800051F999 /* Assets.xcassets */,
 			);
 			path = GroupShot;
+			sourceTree = "<group>";
+		};
+		371CEC8620678F1900DC4F0D /* WDDrawView */ = {
+			isa = PBXGroup;
+			children = (
+				371CEC8720678F1900DC4F0D /* WDDrawPath.h */,
+				371CEC8820678F1900DC4F0D /* WDDrawPath.m */,
+				371CEC8920678F1900DC4F0D /* WDDrawView.h */,
+				371CEC8A20678F1900DC4F0D /* WDDrawView.m */,
+			);
+			path = WDDrawView;
+			sourceTree = "<group>";
+		};
+		920B197E6C5A2895E2B7DE96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				490963C89A6DE2C1DB8272F6 /* libPods-GroupShot.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE8EFA71FACFC6E0C280F53C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0138E2F8C5AF82AF8AFF31E8 /* Pods-GroupShot.debug.xcconfig */,
+				0EBE1234BBAB0D8C3807351C /* Pods-GroupShot.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,9 +151,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3717422C2028B8800051F999 /* Build configuration list for PBXNativeTarget "GroupShot" */;
 			buildPhases = (
+				A679937207EE3C3E2356CE59 /* [CP] Check Pods Manifest.lock */,
 				371742122028B8800051F999 /* Sources */,
 				371742132028B8800051F999 /* Frameworks */,
 				371742142028B8800051F999 /* Resources */,
+				4DB3F4C3608A6E5CBAEA1E66 /* [CP] Embed Pods Frameworks */,
+				E12C8EE3857E1D4C3815C81D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3759C1F42063F04D00C6500D /* ImageViewController.xib in Resources */,
 				371742262028B8800051F999 /* LaunchScreen.storyboard in Resources */,
 				371742232028B8800051F999 /* Assets.xcassets in Resources */,
 				371742382028BFA60051F999 /* ViewController.xib in Resources */,
@@ -151,15 +215,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4DB3F4C3608A6E5CBAEA1E66 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GroupShot/Pods-GroupShot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A679937207EE3C3E2356CE59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GroupShot-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E12C8EE3857E1D4C3815C81D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GroupShot/Pods-GroupShot-resources.sh",
+				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoActionSheet.xib",
+				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoBrowserCell.xib",
+				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoBrowser.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GroupShot/Pods-GroupShot-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		371742122028B8800051F999 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3759C1F32063F04D00C6500D /* ImageViewController.mm in Sources */,
 				3717421E2028B8800051F999 /* ViewController.m in Sources */,
 				371742362028BF350051F999 /* UIImage+ImageData.m in Sources */,
 				371742292028B8800051F999 /* main.m in Sources */,
+				3726F3002073A57A007C7B8A /* GSDefine.cpp in Sources */,
+				3777E1C620640C1000B7D764 /* MTCollectionView.m in Sources */,
+				371CEC8B20678F1900DC4F0D /* WDDrawPath.m in Sources */,
 				3717421B2028B8800051F999 /* AppDelegate.m in Sources */,
+				371CEC8C20678F1900DC4F0D /* WDDrawView.m in Sources */,
 				371742352028BF350051F999 /* UIImage+cdata.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +417,7 @@
 		};
 		3717422D2028B8800051F999 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0138E2F8C5AF82AF8AFF31E8 /* Pods-GroupShot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,7 +425,7 @@
 				INFOPLIST_FILE = GroupShot/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kjh.GroupShot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meitu.kjh1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -307,6 +433,7 @@
 		};
 		3717422E2028B8800051F999 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EBE1234BBAB0D8C3807351C /* Pods-GroupShot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -314,7 +441,7 @@
 				INFOPLIST_FILE = GroupShot/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kjh.GroupShot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meitu.kjh1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

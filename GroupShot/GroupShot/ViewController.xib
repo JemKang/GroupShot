@@ -42,6 +42,9 @@
                     <rect key="frame" x="108" y="144" width="109" height="89"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="从相册中选择"/>
+                    <connections>
+                        <action selector="openImageBtn:" destination="-1" eventType="touchUpInside" id="D7q-aC-jhq"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Q8-F3-DHE">
                     <rect key="frame" x="431" y="158" width="112" height="77"/>
