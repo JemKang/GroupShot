@@ -20,6 +20,9 @@
 		371CEC8B20678F1900DC4F0D /* WDDrawPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 371CEC8820678F1900DC4F0D /* WDDrawPath.m */; };
 		371CEC8C20678F1900DC4F0D /* WDDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 371CEC8A20678F1900DC4F0D /* WDDrawView.m */; };
 		3726F3002073A57A007C7B8A /* GSDefine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3726F2FE2073A57A007C7B8A /* GSDefine.cpp */; };
+		3726F30C20762519007C7B8A /* ChangeImageViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3726F30A20762519007C7B8A /* ChangeImageViewController.mm */; };
+		3726F30D20762519007C7B8A /* ChangeImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3726F30B20762519007C7B8A /* ChangeImageViewController.xib */; };
+		3726F3112078FCFF007C7B8A /* AutoRotateNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3726F3102078FCFF007C7B8A /* AutoRotateNavigationController.m */; };
 		3759C1F32063F04D00C6500D /* ImageViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3759C1F12063F04D00C6500D /* ImageViewController.mm */; };
 		3759C1F42063F04D00C6500D /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3759C1F22063F04D00C6500D /* ImageViewController.xib */; };
 		3777E1C620640C1000B7D764 /* MTCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3777E1C420640C1000B7D764 /* MTCollectionView.m */; };
@@ -49,6 +52,11 @@
 		371CEC8A20678F1900DC4F0D /* WDDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDDrawView.m; sourceTree = "<group>"; };
 		3726F2FE2073A57A007C7B8A /* GSDefine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GSDefine.cpp; sourceTree = "<group>"; };
 		3726F2FF2073A57A007C7B8A /* GSDefine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GSDefine.hpp; sourceTree = "<group>"; };
+		3726F30920762519007C7B8A /* ChangeImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeImageViewController.h; sourceTree = "<group>"; };
+		3726F30A20762519007C7B8A /* ChangeImageViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ChangeImageViewController.mm; sourceTree = "<group>"; };
+		3726F30B20762519007C7B8A /* ChangeImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangeImageViewController.xib; sourceTree = "<group>"; };
+		3726F30F2078FCFF007C7B8A /* AutoRotateNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoRotateNavigationController.h; sourceTree = "<group>"; };
+		3726F3102078FCFF007C7B8A /* AutoRotateNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoRotateNavigationController.m; sourceTree = "<group>"; };
 		3759C1F02063F04D00C6500D /* ImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		3759C1F12063F04D00C6500D /* ImageViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageViewController.mm; sourceTree = "<group>"; };
 		3759C1F22063F04D00C6500D /* ImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
@@ -104,9 +112,14 @@
 				3717421C2028B8800051F999 /* ViewController.h */,
 				3717421D2028B8800051F999 /* ViewController.m */,
 				371742372028BFA60051F999 /* ViewController.xib */,
+				3726F30920762519007C7B8A /* ChangeImageViewController.h */,
+				3726F30A20762519007C7B8A /* ChangeImageViewController.mm */,
+				3726F30B20762519007C7B8A /* ChangeImageViewController.xib */,
 				3759C1F02063F04D00C6500D /* ImageViewController.h */,
 				3759C1F12063F04D00C6500D /* ImageViewController.mm */,
 				3759C1F22063F04D00C6500D /* ImageViewController.xib */,
+				3726F30F2078FCFF007C7B8A /* AutoRotateNavigationController.h */,
+				3726F3102078FCFF007C7B8A /* AutoRotateNavigationController.m */,
 				371742242028B8800051F999 /* LaunchScreen.storyboard */,
 				3717421F2028B8800051F999 /* Main.storyboard */,
 				371742272028B8800051F999 /* Info.plist */,
@@ -205,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3726F30D20762519007C7B8A /* ChangeImageViewController.xib in Resources */,
 				3759C1F42063F04D00C6500D /* ImageViewController.xib in Resources */,
 				371742262028B8800051F999 /* LaunchScreen.storyboard in Resources */,
 				371742232028B8800051F999 /* Assets.xcassets in Resources */,
@@ -279,12 +293,14 @@
 				3759C1F32063F04D00C6500D /* ImageViewController.mm in Sources */,
 				3717421E2028B8800051F999 /* ViewController.m in Sources */,
 				371742362028BF350051F999 /* UIImage+ImageData.m in Sources */,
+				3726F30C20762519007C7B8A /* ChangeImageViewController.mm in Sources */,
 				371742292028B8800051F999 /* main.m in Sources */,
 				3726F3002073A57A007C7B8A /* GSDefine.cpp in Sources */,
 				3777E1C620640C1000B7D764 /* MTCollectionView.m in Sources */,
 				371CEC8B20678F1900DC4F0D /* WDDrawPath.m in Sources */,
 				3717421B2028B8800051F999 /* AppDelegate.m in Sources */,
 				371CEC8C20678F1900DC4F0D /* WDDrawView.m in Sources */,
+				3726F3112078FCFF007C7B8A /* AutoRotateNavigationController.m in Sources */,
 				371742352028BF350051F999 /* UIImage+cdata.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

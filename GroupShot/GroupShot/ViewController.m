@@ -10,6 +10,7 @@
 #import <ZLPhotoActionSheet.h>
 #import "ZLPhotoManager.h"
 #import "ImageViewController.h"
+#import "AutoRotateNavigationController.h"
 @interface ViewController ()
 @property (nonatomic, strong) UIImage *srcImage;
 @property (nonatomic, strong) UIImage *dstImage;
@@ -165,10 +166,11 @@
 {
     ImageViewController *imageView = [[ImageViewController alloc]init];
     imageView.selectPhotos = _lastSelectPhotos;
-    UINavigationController *nvc=[[UINavigationController alloc]initWithRootViewController:imageView];
+    AutoRotateNavigationController *nvc=[[AutoRotateNavigationController alloc]initWithRootViewController:imageView];
     [self presentViewController:nvc animated:YES completion:^{
         NSLog(@"跳转页面");
     }];
+
 }
 ////打开相册或者拍照后调用
 //- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info;
@@ -199,7 +201,7 @@
     
     NSLog(@"image = %@, error = %@, contextInfo = %@", image, error, contextInfo);
 }
--(NSUInteger)supportedInterfaceOrientations{
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
     return (NSUInteger)UIInterfaceOrientationMaskLandscape;
 }
 #pragma mark 强制横屏(针对present方式)
@@ -212,9 +214,9 @@
     return YES;
 }
 //必须有
-//-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
-//    return UIInterfaceOrientationLandscapeRight;
-//}
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return UIInterfaceOrientationLandscapeRight;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
