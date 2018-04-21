@@ -50,9 +50,6 @@
                     <rect key="frame" x="431" y="158" width="112" height="77"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="拍新照片"/>
-                    <connections>
-                        <action selector="takePhotoBnt:" destination="-1" eventType="touchUpInside" id="zMw-2p-dXk"/>
-                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
