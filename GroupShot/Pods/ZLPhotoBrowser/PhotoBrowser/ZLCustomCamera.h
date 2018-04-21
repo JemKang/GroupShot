@@ -12,7 +12,8 @@
 @interface ZLCustomCamera : UIViewController
 
 @property (nonatomic, assign) CFTimeInterval maxRecordTime;
-
+//是否允许拍照
+@property (nonatomic, assign) BOOL allowTakePhoto;
 //是否允许录制视频
 @property (nonatomic, assign) BOOL allowRecordVideo;
 
@@ -30,5 +31,5 @@
  确定回调，如果拍照则videoUrl为nil，如果视频则image为nil
  */
 @property (nonatomic, copy) void (^doneBlock)(UIImage *image, NSURL *videoUrl);
-
+- (void)onDismiss;
 @end

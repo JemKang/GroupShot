@@ -172,7 +172,7 @@
 #pragma mark - GestureRecognizer
 - (void)tapAction:(UITapGestureRecognizer *)tap
 {
-    [self stopAnimate];
+    //[self stopAnimate];
     if (self.delegate && [self.delegate respondsToSelector:@selector(onTakePicture)]) {
         [self.delegate performSelector:@selector(onTakePicture)];
     }
@@ -747,6 +747,7 @@
     
     if (!_takedImageView) {
         _takedImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+        //_takedImageView = [UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 1)
         _takedImageView.backgroundColor = [UIColor blackColor];
         _takedImageView.hidden = YES;
         _takedImageView.contentMode = UIViewContentModeScaleAspectFit;
@@ -763,6 +764,7 @@
         weakSelf.takedImageView.hidden = NO;
         weakSelf.takedImageView.image = image;
         [weakSelf.session stopRunning];
+        [weakSelf onRetake];
     }];
 }
 

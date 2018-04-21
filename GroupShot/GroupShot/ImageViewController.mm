@@ -268,7 +268,7 @@
     UIImage *image = [_selectPhotos objectAtIndex:indexPath.row];
     _srcImage = [self mergeImage:_srcImage SrcImage2:image Left:_leftTopPoint.x Right:_rightBottomPoint.x Top:_leftTopPoint.y Bottom:_rightBottomPoint.y];
     drawView.image = _srcImage;
-    [drawView clear];
+    //[drawView clear];
 
 }
 
