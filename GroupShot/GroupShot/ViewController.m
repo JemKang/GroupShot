@@ -11,7 +11,9 @@
 #import "ZLPhotoManager.h"
 #import "ImageViewController.h"
 #import "AutoRotateNavigationController.h"
-@interface ViewController ()
+#import "ZLCustomCamera.h"
+
+@interface ViewController()<UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, strong) UIImage *srcImage;
 @property (nonatomic, strong) UIImage *dstImage;
 
@@ -19,7 +21,7 @@
 @property (nonatomic, strong) NSMutableArray<PHAsset *> *lastSelectAssets;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) NSArray *arrDataSources;
-
+@property (nonatomic, strong) ZLCustomCamera *camera;
 @property (nonatomic, assign) BOOL isOriginal;
 @end
 
@@ -222,5 +224,65 @@
     // Dispose of any resources that can be recreated.
 }
 
+//拍照
+-(IBAction)takePhotoBnt:(id)sender
+{
+    [self takePhoto];
+}
+
+- (void)takePhoto{
+    if (![ZLPhotoManager haveCameraAuthority]) {
+        NSString *message = [NSString stringWithFormat:GetLocalLanguageTextValue(ZLPhotoBrowserNoCameraAuthorityText), kAPPName];
+//        ShowAlert(message, self.sender);
+//        [self hide];
+        return;
+    }
+//    if (!self.configuration.allowSelectImage &&
+//        !self.configuration.allowRecordVideo) {
+//        ShowAlert(@"allowSelectImage与allowRecordVideo不能同时为NO", self.sender);
+//        return;
+//    }
+    if (NO) {
+        //系统相机拍照
+//        if ([UIImagePickerController isSourceTypeAvailable:
+//             UIImagePickerControllerSourceTypeCamera]){
+//            UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+//            picker.delegate = self;
+//            picker.allowsEditing = NO;
+//            picker.videoQuality = UIImagePickerControllerQualityTypeHigh;
+//            picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+//            NSArray *a1 = self.configuration.allowSelectImage?@[(NSString *)kUTTypeImage]:@[];
+//            NSArray *a2 = self.configuration.allowRecordVideo?@[(NSString *)kUTTypeMovie]:@[];
+//            NSMutableArray *arr = [NSMutableArray array];
+//            [arr addObjectsFromArray:a1];
+//            [arr addObjectsFromArray:a2];
+        
+//            picker.mediaTypes = arr;
+//            picker.videoMaximumDuration = self.configuration.maxRecordDuration;
+//            [self.sender showDetailViewController:picker sender:nil];
+//        }
+    } else {
+        if (![ZLPhotoManager haveMicrophoneAuthority]) {
+            NSString *message = [NSString stringWithFormat:GetLocalLanguageTextValue(ZLPhotoBrowserNoMicrophoneAuthorityText), kAPPName];
+            ShowAlert(message, self);
+            //[self hide];
+            return;
+        }
+        _camera = [[ZLCustomCamera alloc] init];
+        _camera.allowTakePhoto = YES;
+        //camera.allowRecordVideo = self.configuration.allowRecordVideo;
+        _camera.sessionPreset = ZLCaptureSessionPreset1280x720;
+        //camera.videoType = self.configuration.exportVideoType;
+        //camera.circleProgressColor = self.configuration.bottomBtnsNormalTitleColor;
+        //camera.maxRecordDuration = self.configuration.maxRecordDuration;
+        zl_weakify(self);
+        _camera.doneBlock = ^(UIImage *image, NSURL *videoUrl) {
+            zl_strongify(weakSelf);
+            //[strongSelf saveImage:image videoUrl:videoUrl];
+            //[strongSelf takePhoto];
+        };
+        [self showDetailViewController:_camera sender:nil];
+    }
+}
 
 @end

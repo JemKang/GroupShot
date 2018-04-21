@@ -15,6 +15,8 @@
 #import <math.h>
 #import "ChangeImageViewController.h"
 #import "AutoRotateNavigationController.h"
+#import "ZLCustomCamera.h"
+
 @interface ImageViewController ()<UIScrollViewDelegate,UINavigationControllerDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
 {
     WDDrawView *drawView;
@@ -268,7 +270,7 @@
     UIImage *image = [_selectPhotos objectAtIndex:indexPath.row];
     _srcImage = [self mergeImage:_srcImage SrcImage2:image Left:_leftTopPoint.x Right:_rightBottomPoint.x Top:_leftTopPoint.y Bottom:_rightBottomPoint.y];
     drawView.image = _srcImage;
-    [drawView clear];
+    //[drawView clear];
 
 }
 
