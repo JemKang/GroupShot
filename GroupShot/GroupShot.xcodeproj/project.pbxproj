@@ -26,6 +26,8 @@
 		3759C1F32063F04D00C6500D /* ImageViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3759C1F12063F04D00C6500D /* ImageViewController.mm */; };
 		3759C1F42063F04D00C6500D /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3759C1F22063F04D00C6500D /* ImageViewController.xib */; };
 		3777E1C620640C1000B7D764 /* MTCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3777E1C420640C1000B7D764 /* MTCollectionView.m */; };
+		377AC689208C7FBB00663B39 /* EffectViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 377AC687208C7FBB00663B39 /* EffectViewController.mm */; };
+		377AC68A208C7FBB00663B39 /* EffectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 377AC688208C7FBB00663B39 /* EffectViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,9 @@
 		3759C1F22063F04D00C6500D /* ImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
 		3777E1C420640C1000B7D764 /* MTCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCollectionView.m; sourceTree = "<group>"; };
 		3777E1C520640C1000B7D764 /* MTCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCollectionView.h; sourceTree = "<group>"; };
+		377AC686208C7FBB00663B39 /* EffectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EffectViewController.h; sourceTree = "<group>"; };
+		377AC687208C7FBB00663B39 /* EffectViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = EffectViewController.mm; sourceTree = "<group>"; };
+		377AC688208C7FBB00663B39 /* EffectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EffectViewController.xib; sourceTree = "<group>"; };
 		490963C89A6DE2C1DB8272F6 /* libPods-GroupShot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GroupShot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -120,6 +125,9 @@
 				3759C1F22063F04D00C6500D /* ImageViewController.xib */,
 				3726F30F2078FCFF007C7B8A /* AutoRotateNavigationController.h */,
 				3726F3102078FCFF007C7B8A /* AutoRotateNavigationController.m */,
+				377AC686208C7FBB00663B39 /* EffectViewController.h */,
+				377AC687208C7FBB00663B39 /* EffectViewController.mm */,
+				377AC688208C7FBB00663B39 /* EffectViewController.xib */,
 				371742242028B8800051F999 /* LaunchScreen.storyboard */,
 				3717421F2028B8800051F999 /* Main.storyboard */,
 				371742272028B8800051F999 /* Info.plist */,
@@ -221,6 +229,7 @@
 				3726F30D20762519007C7B8A /* ChangeImageViewController.xib in Resources */,
 				3759C1F42063F04D00C6500D /* ImageViewController.xib in Resources */,
 				371742262028B8800051F999 /* LaunchScreen.storyboard in Resources */,
+				377AC68A208C7FBB00663B39 /* EffectViewController.xib in Resources */,
 				371742232028B8800051F999 /* Assets.xcassets in Resources */,
 				371742382028BFA60051F999 /* ViewController.xib in Resources */,
 				371742212028B8800051F999 /* Main.storyboard in Resources */,
@@ -296,6 +305,7 @@
 				3726F30C20762519007C7B8A /* ChangeImageViewController.mm in Sources */,
 				371742292028B8800051F999 /* main.m in Sources */,
 				3726F3002073A57A007C7B8A /* GSDefine.cpp in Sources */,
+				377AC689208C7FBB00663B39 /* EffectViewController.mm in Sources */,
 				3777E1C620640C1000B7D764 /* MTCollectionView.m in Sources */,
 				371CEC8B20678F1900DC4F0D /* WDDrawPath.m in Sources */,
 				3717421B2028B8800051F999 /* AppDelegate.m in Sources */,

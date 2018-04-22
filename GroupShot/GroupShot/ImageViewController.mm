@@ -15,6 +15,7 @@
 #import <math.h>
 #import "ChangeImageViewController.h"
 #import "AutoRotateNavigationController.h"
+#import "EffectViewController.h"
 @interface ImageViewController ()<UIScrollViewDelegate,UINavigationControllerDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
 {
     WDDrawView *drawView;
@@ -187,6 +188,17 @@
 //切换滤镜
 - (void)changeEffect{
     NSLog(@"切换滤镜效果");
+    [self changeToEffectViewController];
+}
+//调整界面
+- (void)changeToEffectViewController
+{
+    EffectViewController *nextView = [[EffectViewController alloc]init];
+    nextView.srcImage = _srcImage;
+    AutoRotateNavigationController *nvc=[[AutoRotateNavigationController alloc]initWithRootViewController:nextView];
+    [self presentViewController:nvc animated:YES completion:^{
+        NSLog(@"跳转到页面effect");
+    }];
 }
 #pragma mark - collectionView delegate
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView

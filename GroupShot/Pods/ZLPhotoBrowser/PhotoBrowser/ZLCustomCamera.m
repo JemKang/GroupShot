@@ -764,7 +764,7 @@
         weakSelf.takedImageView.hidden = NO;
         weakSelf.takedImageView.image = image;
         [weakSelf.session stopRunning];
-        [weakSelf onRetake];
+        //[weakSelf onRetake];
     }];
 }
 
