@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ID</key>
+	<integer>1001</integer>
+	<key>FilterPart</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>Lut</string>
+			<key>VSPath</key>
+			<string></string>
+			<key>FSPath</key>
+			<string></string>
+			<key>LutPath</key>
+			<string>1281.png</string>
+			<key>Alpha</key>
+			<string>1.0</string>
+			<key>SIZE</key>
+			<string>64</string>
+		</dict>
+	</array>
+</dict>
+</plist>

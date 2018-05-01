@@ -136,12 +136,16 @@
 //}
 - (void)clear
 {
-    [self.paths removeAllObjects];
-    
+    int count = self.paths.count;
+    for(int i = 0;i < count - 1;i++){
+        [self.paths removeLastObject];
+    }
+
     [self setNeedsDisplay];
     _maxPoint = CGPointMake(0.0, 0.0);
     _minPoint = CGPointMake(self.frame.size.width,self.frame.size.height);
 }
+
 
 - (void)undo
 {

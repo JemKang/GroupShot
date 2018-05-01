@@ -23,6 +23,15 @@
 		3726F30C20762519007C7B8A /* ChangeImageViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3726F30A20762519007C7B8A /* ChangeImageViewController.mm */; };
 		3726F30D20762519007C7B8A /* ChangeImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3726F30B20762519007C7B8A /* ChangeImageViewController.xib */; };
 		3726F3112078FCFF007C7B8A /* AutoRotateNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3726F3102078FCFF007C7B8A /* AutoRotateNavigationController.m */; };
+		3733D9BD2092D581004B7B65 /* Assert.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3733D9BC2092D581004B7B65 /* Assert.bundle */; };
+		3733D9BF2092D5E7004B7B65 /* PublicFunction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3733D9BE2092D5E7004B7B65 /* PublicFunction.mm */; };
+		3733D9C42092D7F6004B7B65 /* EffectRender.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3733D9C32092D7F6004B7B65 /* EffectRender.mm */; };
+		3733D9C92092DBDF004B7B65 /* LutEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3733D9C72092DBDF004B7B65 /* LutEffect.cpp */; };
+		3733D9CC2092E6E7004B7B65 /* BaseEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3733D9CA2092E6E7004B7B65 /* BaseEffect.cpp */; };
+		3733D9CF20937597004B7B65 /* EffectList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3733D9CD20937597004B7B65 /* EffectList.cpp */; };
+		3733D9D12096CA6B004B7B65 /* GLUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3733D9D02096CA6B004B7B65 /* GLUtils.mm */; };
+		3733D9D3209779C5004B7B65 /* Shader.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3733D9D2209779C5004B7B65 /* Shader.bundle */; };
+		3733D9D820985EF1004B7B65 /* resource in Resources */ = {isa = PBXBuildFile; fileRef = 3733D9D720985EF1004B7B65 /* resource */; };
 		3759C1F32063F04D00C6500D /* ImageViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3759C1F12063F04D00C6500D /* ImageViewController.mm */; };
 		3759C1F42063F04D00C6500D /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3759C1F22063F04D00C6500D /* ImageViewController.xib */; };
 		3777E1C620640C1000B7D764 /* MTCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3777E1C420640C1000B7D764 /* MTCollectionView.m */; };
@@ -59,6 +68,23 @@
 		3726F30B20762519007C7B8A /* ChangeImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangeImageViewController.xib; sourceTree = "<group>"; };
 		3726F30F2078FCFF007C7B8A /* AutoRotateNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoRotateNavigationController.h; sourceTree = "<group>"; };
 		3726F3102078FCFF007C7B8A /* AutoRotateNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoRotateNavigationController.m; sourceTree = "<group>"; };
+		3733D9B92092D4E7004B7B65 /* GLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUtils.h; sourceTree = "<group>"; };
+		3733D9BC2092D581004B7B65 /* Assert.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Assert.bundle; sourceTree = "<group>"; };
+		3733D9BE2092D5E7004B7B65 /* PublicFunction.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PublicFunction.mm; sourceTree = "<group>"; };
+		3733D9C02092D60B004B7B65 /* PublicFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicFunction.h; sourceTree = "<group>"; };
+		3733D9C22092D7F6004B7B65 /* EffectRender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EffectRender.h; sourceTree = "<group>"; };
+		3733D9C32092D7F6004B7B65 /* EffectRender.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = EffectRender.mm; sourceTree = "<group>"; };
+		3733D9C52092D950004B7B65 /* MeituLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeituLog.h; sourceTree = "<group>"; };
+		3733D9C62092D950004B7B65 /* MeituDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeituDefine.h; sourceTree = "<group>"; };
+		3733D9C72092DBDF004B7B65 /* LutEffect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LutEffect.cpp; sourceTree = "<group>"; };
+		3733D9C82092DBDF004B7B65 /* LutEffect.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LutEffect.hpp; sourceTree = "<group>"; };
+		3733D9CA2092E6E7004B7B65 /* BaseEffect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BaseEffect.cpp; sourceTree = "<group>"; };
+		3733D9CB2092E6E7004B7B65 /* BaseEffect.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BaseEffect.hpp; sourceTree = "<group>"; };
+		3733D9CD20937597004B7B65 /* EffectList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EffectList.cpp; sourceTree = "<group>"; };
+		3733D9CE20937597004B7B65 /* EffectList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EffectList.hpp; sourceTree = "<group>"; };
+		3733D9D02096CA6B004B7B65 /* GLUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GLUtils.mm; sourceTree = "<group>"; };
+		3733D9D2209779C5004B7B65 /* Shader.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Shader.bundle; sourceTree = "<group>"; };
+		3733D9D720985EF1004B7B65 /* resource */ = {isa = PBXFileReference; lastKnownFileType = folder; name = resource; path = GroupShot/resource; sourceTree = "<group>"; };
 		3759C1F02063F04D00C6500D /* ImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		3759C1F12063F04D00C6500D /* ImageViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageViewController.mm; sourceTree = "<group>"; };
 		3759C1F22063F04D00C6500D /* ImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
@@ -85,6 +111,7 @@
 		3717420D2028B8800051F999 = {
 			isa = PBXGroup;
 			children = (
+				3733D9D720985EF1004B7B65 /* resource */,
 				371742182028B8800051F999 /* GroupShot */,
 				371742172028B8800051F999 /* Products */,
 				EE8EFA71FACFC6E0C280F53C /* Pods */,
@@ -103,7 +130,11 @@
 		371742182028B8800051F999 /* GroupShot */ = {
 			isa = PBXGroup;
 			children = (
+				3733D9C12092D7BB004B7B65 /* Effect */,
+				3733D9B82092D4C0004B7B65 /* Utils */,
 				371CEC8620678F1900DC4F0D /* WDDrawView */,
+				3733D9C02092D60B004B7B65 /* PublicFunction.h */,
+				3733D9BE2092D5E7004B7B65 /* PublicFunction.mm */,
 				3777E1C520640C1000B7D764 /* MTCollectionView.h */,
 				3777E1C420640C1000B7D764 /* MTCollectionView.m */,
 				3726F2FE2073A57A007C7B8A /* GSDefine.cpp */,
@@ -133,6 +164,8 @@
 				371742272028B8800051F999 /* Info.plist */,
 				371742282028B8800051F999 /* main.m */,
 				371742222028B8800051F999 /* Assets.xcassets */,
+				3733D9BC2092D581004B7B65 /* Assert.bundle */,
+				3733D9D2209779C5004B7B65 /* Shader.bundle */,
 			);
 			path = GroupShot;
 			sourceTree = "<group>";
@@ -146,6 +179,32 @@
 				371CEC8A20678F1900DC4F0D /* WDDrawView.m */,
 			);
 			path = WDDrawView;
+			sourceTree = "<group>";
+		};
+		3733D9B82092D4C0004B7B65 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3733D9D02096CA6B004B7B65 /* GLUtils.mm */,
+				3733D9C62092D950004B7B65 /* MeituDefine.h */,
+				3733D9C52092D950004B7B65 /* MeituLog.h */,
+				3733D9B92092D4E7004B7B65 /* GLUtils.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3733D9C12092D7BB004B7B65 /* Effect */ = {
+			isa = PBXGroup;
+			children = (
+				3733D9C22092D7F6004B7B65 /* EffectRender.h */,
+				3733D9C32092D7F6004B7B65 /* EffectRender.mm */,
+				3733D9C72092DBDF004B7B65 /* LutEffect.cpp */,
+				3733D9C82092DBDF004B7B65 /* LutEffect.hpp */,
+				3733D9CA2092E6E7004B7B65 /* BaseEffect.cpp */,
+				3733D9CB2092E6E7004B7B65 /* BaseEffect.hpp */,
+				3733D9CD20937597004B7B65 /* EffectList.cpp */,
+				3733D9CE20937597004B7B65 /* EffectList.hpp */,
+			);
+			path = Effect;
 			sourceTree = "<group>";
 		};
 		920B197E6C5A2895E2B7DE96 /* Frameworks */ = {
@@ -226,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3733D9D820985EF1004B7B65 /* resource in Resources */,
 				3726F30D20762519007C7B8A /* ChangeImageViewController.xib in Resources */,
 				3759C1F42063F04D00C6500D /* ImageViewController.xib in Resources */,
 				371742262028B8800051F999 /* LaunchScreen.storyboard in Resources */,
@@ -233,6 +293,8 @@
 				371742232028B8800051F999 /* Assets.xcassets in Resources */,
 				371742382028BFA60051F999 /* ViewController.xib in Resources */,
 				371742212028B8800051F999 /* Main.storyboard in Resources */,
+				3733D9D3209779C5004B7B65 /* Shader.bundle in Resources */,
+				3733D9BD2092D581004B7B65 /* Assert.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,18 +362,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				3759C1F32063F04D00C6500D /* ImageViewController.mm in Sources */,
+				3733D9D12096CA6B004B7B65 /* GLUtils.mm in Sources */,
 				3717421E2028B8800051F999 /* ViewController.m in Sources */,
 				371742362028BF350051F999 /* UIImage+ImageData.m in Sources */,
 				3726F30C20762519007C7B8A /* ChangeImageViewController.mm in Sources */,
 				371742292028B8800051F999 /* main.m in Sources */,
 				3726F3002073A57A007C7B8A /* GSDefine.cpp in Sources */,
+				3733D9CF20937597004B7B65 /* EffectList.cpp in Sources */,
 				377AC689208C7FBB00663B39 /* EffectViewController.mm in Sources */,
 				3777E1C620640C1000B7D764 /* MTCollectionView.m in Sources */,
 				371CEC8B20678F1900DC4F0D /* WDDrawPath.m in Sources */,
 				3717421B2028B8800051F999 /* AppDelegate.m in Sources */,
+				3733D9BF2092D5E7004B7B65 /* PublicFunction.mm in Sources */,
+				3733D9C92092DBDF004B7B65 /* LutEffect.cpp in Sources */,
 				371CEC8C20678F1900DC4F0D /* WDDrawView.m in Sources */,
 				3726F3112078FCFF007C7B8A /* AutoRotateNavigationController.m in Sources */,
 				371742352028BF350051F999 /* UIImage+cdata.m in Sources */,
+				3733D9C42092D7F6004B7B65 /* EffectRender.mm in Sources */,
+				3733D9CC2092E6E7004B7B65 /* BaseEffect.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +513,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0138E2F8C5AF82AF8AFF31E8 /* Pods-GroupShot.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UYC23EG4PE;
 				INFOPLIST_FILE = GroupShot/Info.plist;
@@ -461,7 +528,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0EBE1234BBAB0D8C3807351C /* Pods-GroupShot.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UYC23EG4PE;
 				INFOPLIST_FILE = GroupShot/Info.plist;

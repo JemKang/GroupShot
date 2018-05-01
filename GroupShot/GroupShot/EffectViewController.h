@@ -10,4 +10,5 @@
 
 @interface EffectViewController : UIViewController
 @property (strong ,nonatomic) UIImage *srcImage;
+@property (strong ,nonatomic) UIImage *dstImage;
 @end

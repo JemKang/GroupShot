@@ -15,4 +15,17 @@
 #ifndef SAFE_DELETE_ARRAY
 #define SAFE_DELETE_ARRAY(x) { if (x) delete [] (x); (x) = NULL; }
 #endif
+#include <string>
+class GSDefine
+{
+private:
+    GSDefine();
+    static GSDefine *GSGlobal;
+    std::string _folder;
+public:
+    ~GSDefine();
+    static GSDefine* getGSDefine();
+    void setFloder(std::string floder);
+    std::string &getFloder();
+};
 #endif /* GSDefine_hpp */

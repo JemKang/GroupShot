@@ -15,7 +15,8 @@
 @interface ViewController()<UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, strong) UIImage *srcImage;
 @property (nonatomic, strong) UIImage *dstImage;
-
+@property (nonatomic, strong) IBOutlet UIButton *camBtn;
+@property (nonatomic, strong) IBOutlet UIButton *albumBtn;
 @property (nonatomic, strong) NSMutableArray<UIImage *> *lastSelectPhotos;
 @property (nonatomic, strong) NSMutableArray<PHAsset *> *lastSelectAssets;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -28,6 +29,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    UIImage *camIcon = [UIImage imageNamed:@"resource/icon/camera2.png"];
+    [_camBtn setImage:camIcon forState:UIControlStateNormal];
+    _camBtn.layer.masksToBounds = YES;
+    _camBtn.layer.borderWidth = 3;
+    _camBtn.layer.borderColor = [[UIColor blackColor] CGColor];
+    _camBtn.layer.cornerRadius = 50;
+    _camBtn.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    UIImage *albumIcon = [UIImage imageNamed:@"resource/icon/album1.png"];
+    _albumBtn.layer.masksToBounds = YES;
+    _albumBtn.layer.borderWidth = 3;
+    _albumBtn.layer.borderColor = [[UIColor blackColor] CGColor];
+    _albumBtn.layer.cornerRadius = 50;
+    [_albumBtn setImage:albumIcon forState:UIControlStateNormal];
+    _albumBtn.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    //[_albumBtn setTitle:@"相册" forState:UIControlStateNormal];
     // Do any additional setup after loading the view, typically from a nib.
 }
 @synthesize srcImage = _srcImage;
@@ -226,6 +243,7 @@
     ImageViewController *imageView = [[ImageViewController alloc]init];
     imageView.selectPhotos = _lastSelectPhotos;
     AutoRotateNavigationController *nvc=[[AutoRotateNavigationController alloc]initWithRootViewController:imageView];
+    //nvc.navigationBar.frame = CGRectMake(0, 0, 100, 200);
     [self presentViewController:nvc animated:YES completion:^{
         NSLog(@"跳转页面");
     }];

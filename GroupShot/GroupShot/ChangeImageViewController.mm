@@ -17,7 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     UIBarButtonItem *leftBarButtonItem1=[[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(back)];
-    self.navigationItem.leftBarButtonItems = @[leftBarButtonItem1];
+    [leftBarButtonItem1 setImage:[UIImage imageNamed:@"resource/icon/back.png"]];
+    
+    UIBarButtonItem *leftBarButtonItem2=[[UIBarButtonItem alloc]initWithTitle:@"选择一组好看的图片" style:UIBarButtonItemStylePlain target:self action:@selector(selectimage)];
+    leftBarButtonItem2.width = 200;
+    self.navigationItem.leftBarButtonItems = @[leftBarButtonItem1,leftBarButtonItem2];
+    
     [self initCollectionView];
     
     // Do any additional setup after loading the view from its nib.

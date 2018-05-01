@@ -16,6 +16,7 @@
 #import "ChangeImageViewController.h"
 #import "AutoRotateNavigationController.h"
 #import "EffectViewController.h"
+#import <Photos/PHPhotoLibrary.h>
 @interface ImageViewController ()<UIScrollViewDelegate,UINavigationControllerDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
 {
     WDDrawView *drawView;
@@ -40,14 +41,27 @@
     [super viewDidLoad];
     isReloadData = false;
     UIBarButtonItem *leftBarButtonItem1=[[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(back)];
-    
+    //UIView *lefetCustomView = [[UIView alloc]initWithFrame:CGRectMake(0, 0,30, 50)];
+    //UIImageView *backImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0,30, 50)];
+    //[backImage setImage:[UIImage imageNamed:@"resource/icon/back.png"]];
+    //[lefetCustomView addSubview:backImage];
+    [leftBarButtonItem1 setImage:[UIImage imageNamed:@"resource/icon/back.png"]];
+//    UIBarButtonItem *leftBarButtonItem1 = [[UIBarButtonItem alloc]initWithCustomView:lefetCustomView];
+//    [leftBarButtonItem1 setAction:@selector(back)];
     UIBarButtonItem *leftBarButtonItem2 = [[UIBarButtonItem alloc]initWithTitle:@"撤销" style:UIBarButtonItemStylePlain target:self action:@selector(undo)];
-    
+    [leftBarButtonItem2 setImage:[UIImage imageNamed:@"resource/icon/undo.png"]];
     UIBarButtonItem *leftBarButtonItem3 = [[UIBarButtonItem alloc]initWithTitle:@"切换图片" style:UIBarButtonItemStylePlain target:self action:@selector(changeImage)];
+    [leftBarButtonItem3 setImage:[UIImage imageNamed:@"resource/icon/exchange.png"]];
     
-    UIBarButtonItem *leftBarButtonItem4 = [[UIBarButtonItem alloc]initWithTitle:@"滤镜" style:UIBarButtonItemStylePlain target:self action:@selector(changeEffect)];
-    self.navigationItem.leftBarButtonItems = @[leftBarButtonItem1,leftBarButtonItem2,leftBarButtonItem3,leftBarButtonItem4];
+    UIBarButtonItem *leftBarButtonItem4 = [[UIBarButtonItem alloc]initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(saveImage)];
     
+    [leftBarButtonItem4 setImage:[UIImage imageNamed:@"resource/icon/save.png"]];
+    
+    UIBarButtonItem *leftBarButtonItem5 = [[UIBarButtonItem alloc]initWithTitle:@"滤镜" style:UIBarButtonItemStylePlain target:self action:@selector(changeEffect)];
+    self.navigationItem.leftBarButtonItems = @[leftBarButtonItem1,leftBarButtonItem2,leftBarButtonItem3,leftBarButtonItem4,leftBarButtonItem5];
+    
+    
+    //nvc.navigationBar.frame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height + 10);
    // _scrollView.backgroundColor = [UIColor blackColor];
     _srcImage = [_selectPhotos objectAtIndex:0];
 //    _imageView = [[UIImageView alloc]initWithFrame:_scrollView.bounds];
@@ -57,7 +71,7 @@
 //    _imageView.contentMode = UIViewContentModeScaleAspectFit;//设置自适应图片的宽高
     //设置UIScrollView的滚动范围和图片的真实尺寸一致
     _scrollView.scrollEnabled = NO;//设置禁止滚动
-    _scrollView.backgroundColor = [UIColor whiteColor];
+    _scrollView.backgroundColor = [UIColor colorWithRed:(41.0f/255.0f) green:(36.0f/255.0f) blue:(33.0f/255.0f) alpha:1.0];
     //_scrollView.contentSize = _scrollView.bounds.size;
     //[_scrollView addSubview:_imageView];
     CGSize size = _srcImage.size;
@@ -77,7 +91,7 @@
     
     drawView.backgroundColor = [UIColor whiteColor];
     //drawView.image = image;
-    drawView.pathColor = [UIColor blackColor];
+    drawView.pathColor = [UIColor colorWithRed:1.0 green:(235.0f/255.0f) blue:(205/255) alpha:0.3];
     drawView.lineWidth = 15;
     drawView.image = _srcImage;
     drawView.contentMode = UIViewContentModeScaleAspectFit;//设置自适应图片的宽高
@@ -165,7 +179,7 @@
 //清除
 -(void)clearPath
 {
-    NSLog(@"撤销");
+    NSLog(@"清除");
     [drawView clear];
     
 }
@@ -180,6 +194,7 @@
     ChangeImageViewController *nextView = [[ChangeImageViewController alloc]init];
     nextView.selectPhotos = _selectPhotos;
     AutoRotateNavigationController *nvc=[[AutoRotateNavigationController alloc]initWithRootViewController:nextView];
+    [nvc.navigationController setTitle:@"选择一组好看的图片"];
     [self presentViewController:nvc animated:YES completion:^{
         NSLog(@"跳转页面");
     }];
@@ -200,6 +215,57 @@
         NSLog(@"跳转到页面effect");
     }];
 }
+//保存图片
+-(void)saveImage
+{
+    if ([PHPhotoLibrary authorizationStatus] == PHAuthorizationStatusNotDetermined) {
+        
+        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+            
+            if (status == PHAuthorizationStatusAuthorized) {
+                
+                // TODO:...
+                UIImageWriteToSavedPhotosAlbum(drawView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), (__bridge void *)self);
+                [self displayMessage:(@"保存成功！")];
+            }
+        }];
+    }else{
+        UIImageWriteToSavedPhotosAlbum(drawView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), (__bridge void *)self);
+        [self displayMessage:(@"保存成功！")];
+    }
+    
+}
+-(void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    
+    NSLog(@"image = %@, error = %@, contextInfo = %@", image, error, contextInfo);
+}
+//显示信息
+
+-(void)displayMessage:(NSString*)message
+{
+    //添加要用到的Label
+    UILabel * label = [[UILabel alloc]initWithFrame:CGRectMake(100, 300, 150, 40)];
+    label.backgroundColor = [UIColor whiteColor];
+    label.font = [UIFont systemFontOfSize:14];
+    label.text = message;
+    label.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:label];
+    
+    //设置动画
+    CATransition * transion = [CATransition animation];
+    
+    transion.type = @"push";//设置动画方式
+    transion.subtype = @"fromTop";//设置动画从那个方向开始
+    [label.layer addAnimation:transion forKey:nil];//给Label.layer 添加动画 //设置延时效果
+    
+    //不占用主线程
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(),^{
+        [label removeFromSuperview];
+        
+    });//这句话的意思是1.5秒后，把label移出视图
+}
+
 #pragma mark - collectionView delegate
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
@@ -278,12 +344,23 @@
 {
     //
     UIImage *image = [_selectPhotos objectAtIndex:indexPath.row];
-    _srcImage = [self mergeImage:_srcImage SrcImage2:image Left:_leftTopPoint.x Right:_rightBottomPoint.x Top:_leftTopPoint.y Bottom:_rightBottomPoint.y];
+    
+    unsigned char *pDestData = new unsigned char[_srcImage.size.width * _srcImage.size.height * 4];
+    memset(pDestData, 0, _srcImage.size.width * _srcImage.size.height * 4);
+    UIImage *image2 = [UIImage imageWithRGBAData:pDestData withWidth:_srcImage.size.width withHeight:_srcImage.size.height];
+    image = [self mergeImage:image2 SrcImage2:image Left:_leftTopPoint.x Right:_rightBottomPoint.x Top:_leftTopPoint.y Bottom:_rightBottomPoint.y];
+   
+    _srcImage = [_srcImage blendWithImage:image alpha:1.0];
     drawView.image = _srcImage;
-    //[drawView clear];
-
+    [drawView clear];
 }
 
+
+- (UIImage*)mixImage:(UIImage *)srcImage1 SrcImage2:(UIImage *)srcImage2
+{
+    //_srcImage blendWithImage:srcImage1 alpha:<#(CGFloat)#>
+    return _srcImage;
+}
 - (UIImage *)mergeImage:(UIImage *)srcImage1 SrcImage2:(UIImage *)srcImage2 Left:(int)left Right:(int)right Top:(int)top Bottom:(int)bottom
 {
     //从src2截取一部分到src1

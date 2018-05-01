@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
+                <outlet property="albumBtn" destination="lXA-o8-b6a" id="Zhd-21-Lzm"/>
+                <outlet property="camBtn" destination="8Q8-F3-DHE" id="fHL-MC-n7q"/>
                 <outlet property="view" destination="iN0-l3-epB" id="3ie-t9-s0l"/>
             </connections>
         </placeholder>
@@ -20,15 +22,6 @@
             <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UYI-zC-PmC">
-                    <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <items>
-                        <navigationItem title="GroupShot" id="te0-rU-5oK">
-                            <barButtonItem key="rightBarButtonItem" title="关于" id="bJc-x4-aJ9"/>
-                        </navigationItem>
-                    </items>
-                </navigationBar>
                 <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OYp-c0-uVc">
                     <rect key="frame" x="0.0" y="343" width="667" height="32"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -39,21 +32,30 @@
                     </items>
                 </navigationBar>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXA-o8-b6a">
-                    <rect key="frame" x="108" y="144" width="109" height="89"/>
+                    <rect key="frame" x="123" y="144" width="100" height="100"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="从相册中选择"/>
+                    <state key="normal" title="选图"/>
                     <connections>
                         <action selector="openImageBtn:" destination="-1" eventType="touchUpInside" id="D7q-aC-jhq"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Q8-F3-DHE">
-                    <rect key="frame" x="431" y="158" width="112" height="77"/>
+                    <rect key="frame" x="431" y="144" width="100" height="100"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="拍新照片"/>
+                    <state key="normal" title="拍照"/>
                     <connections>
                         <action selector="takePhotoBnt:" destination="-1" eventType="touchUpInside" id="zMw-2p-dXk"/>
                     </connections>
                 </button>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UYI-zC-PmC">
+                    <rect key="frame" x="0.0" y="0.0" width="668" height="32"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <navigationItem title="GroupShot" id="te0-rU-5oK">
+                            <barButtonItem key="rightBarButtonItem" title="关于" id="bJc-x4-aJ9"/>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
